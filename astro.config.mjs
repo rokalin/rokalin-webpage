@@ -5,5 +5,8 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rokalin.co.uk',
+  build: {
+    assets: 'astro_',
+  },
   integrations: [tailwind()]
 });
