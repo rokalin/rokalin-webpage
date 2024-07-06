@@ -1,0 +1,26 @@
+---
+import clsx from 'clsx';
+
+interface Props {
+  href: string
+}
+
+const { href } = Astro.props
+
+const twCommon = "shrink-0 rounded-lg p-2 text-sm font-medium" 
+const twCurrent = "bg-sky-100 text-sky-600" 
+const twNotCurrent = "text-gray-500 hover:bg-gray-50 hover:text-gray-700" 
+
+
+const current = href == Astro.url.pathname
+
+const tw = clsx(twCommon, {
+  [twCurrent]: current,
+  [twNotCurrent]: !current,
+})
+
+---
+
+<a href={href} class={tw}>
+  <slot />
+</a>
