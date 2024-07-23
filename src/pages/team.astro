@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Title from '../components/Title.astro';
 import { getCollection } from 'astro:content';
 
 const team = await getCollection('team');
@@ -7,6 +8,7 @@ const team = await getCollection('team');
 ---
 
 <Base title="Team">
+	<Title>Our Team</Title>
 	<ul>
 		{team.map(member => (
 			<li class="mt-12 flex flex-col gap-y-2 text-center">
