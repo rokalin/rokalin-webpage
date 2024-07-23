@@ -56,3 +56,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 Any static assets, like images, can be placed in the `public/` directory.
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## License
+
+This project is not licensed under an open-source license and is the intellectual property of Rokalin Pharmaceuticals.
