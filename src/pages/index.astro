@@ -1,7 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
+import Banner from '../components/Banner.astro';
 ---
 
 <Base title="Rokalin Pharmaceuticals">
-	<h1>Rokalin Pharmaceuticals</h1>
+	<h1 class="text-5xl font-extrabold text-center my-16">Rokalin Pharmaceuticals</h1>
+	<Banner title="Mission Statement" body="To pioneer nano-enhanced therapies that offer effective, safe, and affordable cancer treatment." />
+	<Banner title="Problem" body="Existing cancer treatments are plagued by severe side effects and limited efficacy. Although many natural compounds have proven anticancer properties, their weak effects and high dose requirements render them clinically impractical." />
+	<Banner title="Solution" body="Our innovative nano-enhancing formulations increase the specificity and activity of these natural anticancer compounds, making them clinically effective while significantly reducing side effects." />
+	<Banner title="Market Opportunity" body="The global cancer treatment market is projected to reach $520 billion by 2033, presenting a substantial opportunity for our advanced nanoformulated therapies." />
 </Base>
