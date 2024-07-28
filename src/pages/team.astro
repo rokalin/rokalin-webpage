@@ -8,10 +8,12 @@ const team = await getCollection('team');
 ---
 
 <Base title="Team">
-	<Title>Our Team</Title>
+	<div class="mb-14">
+		<Title>Our Team</Title>
+	</div>
 	<ul>
 		{team.map(member => (
-			<li class="mt-12 flex flex-col gap-y-2 text-center">
+			<li class="mb-12 flex flex-col gap-y-2 text-center">
 				<img src={member.data.image} alt={member.data.name} class="w-32 h-32 rounded-full object-cover mx-auto" />
 				<h2>{member.data.name}</h2>
 				<h3>{member.data.role}</h3>
