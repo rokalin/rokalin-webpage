@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import Title from '../components/Title.astro';
+import { getCollection } from 'astro:content';
+
+const values = await getCollection('values');
+---
+
+<Base title="Values">
+	<div class="mb-14">
+		<Title>Our Values</Title>
+	</div>
+	<div class="mx-4 md:mx-10 lg:mx-28 xl:mx-40">
+		<p class="mb-8">
+			At Rokalin Pharmaceuticals our mission is to improve the survival rates of patients with
+			rare cancers. We are driven by a shared vision of a healthier future and are committed
+			to making that vision a reality through innovation, collaboration, and unwavering
+			dedication.
+		</p>
+		<ol>
+			{values.map(value => (
+				<li class="mb-12">
+					<h2 class="mb-3 text-3xl font-bold">{value.data.title}</h2>
+					<p>{value.data.body}</p>
+				</li>
+			))}
+		</ol>
+	</div>
+</Base>
+
