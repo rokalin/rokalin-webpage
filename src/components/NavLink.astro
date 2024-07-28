@@ -7,10 +7,9 @@ interface Props {
 
 const { href } = Astro.props
 
-const twCommon = "shrink-0 rounded-lg p-2 text-sm font-medium" 
-const twCurrent = "bg-sky-100 text-sky-600" 
-const twNotCurrent = "text-gray-500 hover:bg-gray-50 hover:text-gray-700" 
-
+const twCommon = "shrink-0 rounded-lg py-1 px-2 text-white text-sm font-medium" 
+const twCurrent = "bg-rokalin-teal-400" 
+const twNotCurrent = "hover:bg-rokalin-teal-300" 
 
 const current = href == Astro.url.pathname
 
