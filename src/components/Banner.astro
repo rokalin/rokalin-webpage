@@ -2,20 +2,21 @@
 interface Props {
   title: string
   body: string
+  align?: 'left' | 'right'
 }
 
-const { title, body } = Astro.props;
+const { title, body, align = 'left' } = Astro.props;
+
+const marginLeft = align == 'left' ? '' : 'ml-auto';
 ---
 
-<section>
-  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:flex lg:items-center">
-    <div class="max-w-xl text-left">
-      <h2 class="text-3xl sm:text-5xl font-extrabold">
-	{title}
-      </h2>
-      <p class="mt-4 max-w-lg sm:text-xl/relaxed">
-	{body}
-      </p>
-    </div>
+<section class=`mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-8 md:py-12 text-left`>
+  <div class=`lg:w-2/4 ${marginLeft}`>
+    <h2 class=`text-3xl sm:text-5xl font-extrabold mb-4`>
+      {title}
+    </h2>
+    <p class=`max-w-lg sm:text-xl/relaxed`>
+      {body}
+    </p>
   </div>
 </section>
