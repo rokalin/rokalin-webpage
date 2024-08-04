@@ -1,0 +1,14 @@
+---
+interface Props {
+  size: number;
+}
+
+const { size } = Astro.props;
+---
+<img
+  width={size}
+  height={size}
+  alt="Rokalin Pharmaceuticals"
+  src="/images/logo-nano-transparent.png"
+  class="object-cover rounded-full bg-white rounded"
+/>

@@ -1,15 +1,10 @@
 ---
 import NavLink from './NavLink.astro';
+import RokalinNano from './images/RokalinNano.astro';
 ---
 
 <nav class="flex justify-start items-center gap-4 px-4 py-2 bg-rokalin-teal-500">
-	<img
-		width="32"
-		height="32"
-		alt="Rokalin Pharmaceuticals"
-		src="/images/logo-nano-transparent.png"
-		class="object-cover rounded-full bg-white rounded"
-	/>
+	<RokalinNano size={32} />
 	<NavLink href="/">Home</NavLink>
 	<NavLink href="/values/">Values</NavLink>
 	<NavLink href="/team/">Team</NavLink>
