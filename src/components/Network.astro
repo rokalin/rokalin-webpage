@@ -18,10 +18,10 @@ const network: Partner[] = [
   <h2 class="text-center text-3xl sm:text-5xl font-extrabold mb-6 sm:mb-10">
     Our Network
   </h2>
-  <ul class="flex justify-evenly items-center flex-wrap gap-x-3 gap-y-2">
+  <ul class="flex justify-evenly items-center flex-wrap gap-x-6 gap-y-2">
     {network.map(partner => (
       <li>
-        <img width="148" height="148" class="object-cover" src=`/images/network/${partner.image}` alt={partner.name} />
+        <img width="96" height="96" class="object-cover w-24 md:w-36" src=`/images/network/${partner.image}` alt={partner.name} />
       </li>
     ))}
   </ul>
