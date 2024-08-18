@@ -1,0 +1,28 @@
+---
+
+interface Partner {
+  image: string;
+  name: string;
+}
+
+const network: Partner[] = [
+  { name: "Business and Intellectual Property Centre Oxfordshire", image: "bipc.jpeg" },
+  { name: "Imperial Enterprise Lab", image: "imperial-enterprise-lab.png" },
+  { name: "Oxford Innovation Space", image: "ois.jpeg" },
+  { name: "University of Oxford", image: "oxford.png" },
+  { name: "Oxfordshire Local Enterprise Partnership", image: "oxlep.png "}
+]
+
+---
+<section>
+  <h2 class="text-center text-3xl sm:text-5xl font-extrabold mb-6 sm:mb-10">
+    Our Network
+  </h2>
+  <ul class="flex justify-evenly items-center flex-wrap gap-x-3 gap-y-2">
+    {network.map(partner => (
+      <li>
+        <img width="148" height="148" class="object-cover" src=`/images/network/${partner.image}` alt={partner.name} />
+      </li>
+    ))}
+  </ul>
+</section>

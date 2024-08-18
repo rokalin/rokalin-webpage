@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Banner from '../components/Banner.astro';
 import Title from '../components/Title.astro';
+import Network from '../components/Network.astro';
 ---
 
 <Base title="Rokalin Pharmaceuticals">
@@ -32,17 +33,6 @@ import Title from '../components/Title.astro';
     </section>
   </div>
   <div class="mt-16 lg:mt-28">
-    <section>
-      <h2 class="text-center text-3xl sm:text-5xl font-extrabold mb-6 sm:mb-10">
-        Our Network
-      </h2>
-      <ul class="flex justify-evenly items-center flex-wrap gap-x-3 gap-y-2">
-        {["bipc.jpeg", "imperial-enterprise-lab.png", "ois.jpeg", "oxford.png", "oxlep.png"].map(image => (
-          <li>
-            <img width="148" height="148" class="object-cover" src=`/images/network/${image}` />
-          </li>
-        ))}
-      </ul>
-    </section>
+    <Network />
   </div>
 </Base>
