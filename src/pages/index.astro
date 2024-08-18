@@ -31,4 +31,18 @@ import Title from '../components/Title.astro';
       <iframe class="mx-auto w-full max-w-3xl aspect-video" src="https://www.youtube.com/embed/ehTiIftjAeA?si=F6dpfnHNCGBm_k4v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
   </div>
+  <div class="mt-16 lg:mt-28">
+    <section>
+      <h2 class="text-center text-3xl sm:text-5xl font-extrabold mb-6 sm:mb-10">
+        Our Network
+      </h2>
+      <ul class="flex justify-evenly items-center flex-wrap gap-x-3 gap-y-2">
+        {["bipc.jpeg", "imperial-enterprise-lab.png", "ois.jpeg", "oxford.png", "oxlep.png"].map(image => (
+          <li>
+            <img width="148" height="148" class="object-cover" src=`/images/network/${image}` />
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
 </Base>
